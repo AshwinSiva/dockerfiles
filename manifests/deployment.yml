@@ -17,15 +17,16 @@ spec:
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
           - containerPort: 9200
+            name: http
           livenessProbe:
             httpGet:
-              path: /monitoring/alive
-              port: 9200
-            initialDelaySeconds: 5
+              path: /_cluster/health
+              port: http
+            initialDelaySeconds: 40
             periodSeconds: 10
           readinessProbe:
             httpGet:
-              path: /monitoring/alive
-              port: 9200
-            initialDelaySeconds: 15
+              path: /_cluster/health
+              port: http
+            initialDelaySeconds: 30
             periodSeconds: 20
