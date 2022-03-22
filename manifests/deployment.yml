@@ -26,7 +26,7 @@ spec:
         port: 9200 
       initialDelaySeconds: 5
       periodSeconds: 10
-     livenessProbe:
+    livenessProbe:
       tcpsocket:
         port: 9200 
       initialDelaySeconds: 15
