@@ -19,9 +19,9 @@ spec:
           - containerPort: 9200
           livenessProbe:
               port: 9200
-             initialDelaySeconds: 5
-             periodSeconds: 10
+            initialDelaySeconds: 5
+            periodSeconds: 10
           readinessProbe:
               port: 9200
-             initialDelaySeconds: 15
-             periodSeconds: 20
+            initialDelaySeconds: 15
+            periodSeconds: 20
