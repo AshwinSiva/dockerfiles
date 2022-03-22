@@ -17,13 +17,13 @@ spec:
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
           - containerPort: 9200
-  readinessProbe:
-    tcpsocket:
-     port: 9200 
-    initialDelaySeconds: 5
-    periodSeconds: 10
-  livenessProbe:
-     tcpsocket:
-      port: 9200 
-     initialDelaySeconds: 15
-     periodSeconds: 20
+          readinessProbe:
+            tcpsocket:
+              port: 9200
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpsocket:
+              port: 9200
+            initialDelaySeconds: 15
+            periodSeconds: 20
