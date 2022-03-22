@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ashwinsivadockerfiles 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashwinsivadockerfiles
+  template:
+    metadata:
+      labels:
+        app: ashwinsivadockerfiles 
+    spec:
+      containers:
+        - name: ashwinsivadockerfiles 
+          image: abx13.azurecr.io/ashwinsivadockerfiles
+          ports:
+          - containerPort: 9200
