@@ -17,13 +17,15 @@ spec:
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
           - containerPort: 9200
-          readinessProbe:
-            tcpsocket:
-              port: 8080
-            initialDelaySeconds: 5
-            periodSeconds: 10
           livenessProbe:
-            tcpsocket:
-              port: 8000
-            initialDelaySeconds: 15
-            periodSeconds: 20
+          httpGet:
+            path: /health
+            port: 9200
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 9200
+          initialDelaySeconds: 15
+          periodSeconds: 20
