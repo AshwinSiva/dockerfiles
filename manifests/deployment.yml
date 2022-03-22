@@ -16,8 +16,8 @@ spec:
         - name: ashwinsivadockerfiles 
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
-          - protocol: "TCP"
           - containerPort: 9200
+          - protocol: "TCP"
             name: http
           livenessProbe:
             tcpSocket:
