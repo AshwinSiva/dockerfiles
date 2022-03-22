@@ -19,13 +19,13 @@ spec:
           - containerPort: 9200
           livenessProbe:
             httpGet:
-              path: /health
+              path: /monitoring/alive
               port: 9200
             initialDelaySeconds: 5
             periodSeconds: 10
           readinessProbe:
             httpGet:
-              path: /health
+              path: /monitoring/alive
               port: 9200
             initialDelaySeconds: 15
             periodSeconds: 20
