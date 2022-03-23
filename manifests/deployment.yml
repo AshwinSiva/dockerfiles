@@ -18,10 +18,7 @@ spec:
           ports:
           - containerPort: 9200
           readinessProbe:
-            initialDelaySeconds: 1
-            periodSeconds: 2
-            timeoutSeconds: 1
-            successThreshold: 1
-            failureThreshold: 1
               port: 9200
+            timeoutSeconds: 1
+            
           
