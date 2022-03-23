@@ -26,4 +26,4 @@ spec:
             tcpSocket:
               port: 9200
             initialDelaySeconds: 10
-            periodSeconds: 25
+            periodSeconds: 24
