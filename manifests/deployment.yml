@@ -17,9 +17,4 @@ spec:
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
           - containerPort: 9200
-          readinessProbe:
-            tcpSocket:
-              port: 9200
-            initialDelaySeconds: 3
-            periodSeconds: 8
-          
+         
