@@ -20,10 +20,10 @@ spec:
           livenessProbe:
             tcpSocket:
               port: 9200
-            initialDelaySeconds: 40
+            initialDelaySeconds: 5
             periodSeconds: 10
           readinessProbe:
             tcpSocket:
               port: 9200
-            initialDelaySeconds: 30
+            initialDelaySeconds: 15
             periodSeconds: 20
