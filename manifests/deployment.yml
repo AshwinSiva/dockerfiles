@@ -17,8 +17,6 @@ spec:
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
           - containerPort: 9200
-          readinessProbe:
-              port: 9200
-            timeoutSeconds: 1
+         
             
           
