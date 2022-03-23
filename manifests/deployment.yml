@@ -18,10 +18,16 @@ spec:
           ports:
           - containerPort: 9200
           livenessProbe:
-            port: 9200
-            initialDelaySeconds: 5
-            periodSeconds: 10
+            httpGet:
+              path: /
+              scheme: HTTP
+              port: 9200
+            initialDelaySeconds: 15
+            periodSeconds: 20
           readinessProbe:
-            port: 9200
+            httpGet:
+              path: /
+              scheme: HTTP
+              port: 9200
             initialDelaySeconds: 15
             periodSeconds: 20
