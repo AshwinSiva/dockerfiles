@@ -19,11 +19,13 @@ spec:
           - containerPort: 9200
           readinessProbe:
             tcpSocket:
+              host:
               port: 9200
             initialDelaySeconds: 3
             periodSeconds: 8
           livenessProbe:
             tcpSocket:
+              host:
               port: 9200
             initialDelaySeconds: 7
             periodSeconds: 12
