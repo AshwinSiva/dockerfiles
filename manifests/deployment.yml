@@ -16,14 +16,14 @@ spec:
         - name: ashwinsivadockerfiles 
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
-          - containerPort: 8080
+          - containerPort: 9200
           readinessProbe:
             tcpSocket:
               port: 9200
-            initialDelaySeconds: 20
-            periodSeconds: 30
+            initialDelaySeconds: 5
+            periodSeconds: 15
           livenessProbe:
             tcpSocket:
               port: 9200
-            initialDelaySeconds: 25
-            periodSeconds: 40
+            initialDelaySeconds: 10
+            periodSeconds: 25
