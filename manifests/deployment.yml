@@ -17,17 +17,4 @@ spec:
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
           - containerPort: 8080
-          livenessProbe:
-            httpGet:
-              path: /
-              scheme: HTTP
-              port: 8080
-            initialDelaySeconds: 25
-            periodSeconds: 40
-          readinessProbe:
-            httpGet:
-              path: /
-              scheme: HTTP
-              port: 8080
-            initialDelaySeconds: 25
-            periodSeconds: 50
+          
