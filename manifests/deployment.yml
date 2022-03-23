@@ -16,7 +16,7 @@ spec:
         - name: ashwinsivadockerfiles 
           image: abx13.azurecr.io/ashwinsivadockerfiles
           ports:
-          - containerPort: 9200
+          - containerPort: 9200 
          
             
           
