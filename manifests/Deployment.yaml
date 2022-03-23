@@ -4,29 +4,17 @@ metadata:
   name: sample-logstash
   labels:
     component: sample-logstash
-  name: ashwinsivadockerfiles 
 spec:
   replicas: 1
   selector:
     matchLabels:
      component: sample-logstash
-   replicas: 1
-  selector:
-    matchLabels:
-      app: ashwinsivadockerfiles
   template:
     metadata:
       labels:
         component: sample-logstash
-    metadata:
-      labels:
-        app: ashwinsivadockerfiles 
     spec:
       containers:
-      - name: ashwinsivadockerfiles 
-        image: abx13.azurecr.io/ashwinsivadockerfiles
-        ports:
-          - containerPort: 9200 
       - name: sample-logstash
         image: docker.elastic.co/logstash/logstash:6.4.1
         volumeMounts:
